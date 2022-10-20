@@ -11,6 +11,20 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Home">
    <children>
+      <MenuBar prefHeight="25.0" prefWidth="619.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulo">
+            <items>
+              <MenuItem fx:id="menuSesau" mnemonicParsing="false" onAction="#onMenuClick" text="SESAU" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
       <Label fx:id="msg" layoutX="164.0" layoutY="34.0" prefHeight="43.0" prefWidth="291.0" text="Central de Procedures" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="29.0" />
@@ -22,19 +36,5 @@
       <Line endX="436.0" layoutX="128.0" layoutY="117.0" startX="-100.0" />
       <Label layoutX="28.0" layoutY="88.0" text="Procedures" />
       <Label layoutX="26.0" layoutY="261.0" text="Consultas" />
-      <MenuBar prefHeight="25.0" prefWidth="619.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Módulo">
-            <items>
-              <MenuItem mnemonicParsing="false" text="SESAU" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
    </children>
 </AnchorPane>

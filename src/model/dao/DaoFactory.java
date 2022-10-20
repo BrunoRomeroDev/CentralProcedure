@@ -8,7 +8,7 @@ import model.dao.impl.UsuariosDaoJDBC;
 
 public class DaoFactory {
 
-	public static UsuariosDao createUsuarioDao() {
+	public static UsuariosDao acessoUsuarioDao() {
 		return new UsuariosDaoJDBC(DB.getConnection());
 	}
 	

@@ -13,6 +13,7 @@ public class Main extends Application {
 	
 	private static Scene loginScene;
 	private static Scene homeScene;
+	private static Scene sesauScene;
 	
 	@Override
 	public void start(Stage stage) {
@@ -23,6 +24,9 @@ public class Main extends Application {
 				
 				Parent parentLogin = FXMLLoader.load(getClass().getResource("/gui/View.fxml"));
 				loginScene = new Scene(parentLogin);
+				
+				Parent parentSesau = FXMLLoader.load(getClass().getResource("/gui/SESAU.fxml"));
+				sesauScene = new Scene(parentSesau);
 				
 				Parent parentHome = FXMLLoader.load(getClass().getResource("/gui/Home.fxml"));
 				homeScene = new Scene(parentHome);
@@ -42,6 +46,8 @@ public class Main extends Application {
 			stage.setScene(loginScene);
 		case "home":
 			stage.setScene(homeScene);
+		case "sesau":
+			stage.setScene(sesauScene);
 		}
 	}
 	

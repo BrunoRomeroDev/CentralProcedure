@@ -21,16 +21,16 @@ public class ServiceDaoJDBC implements ServicesDao{
 	
 	
 	@Override
-	public void execProcedurePMSV_ACESSO(Integer chapa,String intruso) {
+	public void execProcedurePMSVAcesso(Integer chapa, String intruso) {
 		PreparedStatement cs = null;
 		Integer rs = null;
 		try {
 			
 			cs = conn.prepareCall(
-					"CALL public.pmsv_acessos_c065_c012_sp(?,?)");
+					"CALL public.pmsv_acessos_c065_c012_sp(?)");
 			
 				cs.setInt(1, chapa);
-				cs.setString(2, intruso);
+
 				rs = cs.executeUpdate();
 				
 					JOptionPane.showMessageDialog(null,rs.toString()+ " Executado com Sucesso!!!");
@@ -69,7 +69,7 @@ public class ServiceDaoJDBC implements ServicesDao{
 
 
 	@Override
-	public void execProcedurePMSV_SESSAO(Integer chapa) {
+	public void execProcedurePMSVDerruba(Integer chapa) {
 		
 		
 	}

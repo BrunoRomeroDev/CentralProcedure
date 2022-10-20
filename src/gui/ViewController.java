@@ -28,11 +28,13 @@ public class ViewController {
 	@FXML
 	private Button btLogin;
 	
+	
+	
 	@FXML
 	public boolean onBtSumClick() throws Exception {
 		boolean check = false;
 		try {
-			 UsuariosDao dao = DaoFactory.createUsuarioDao();
+			 UsuariosDao dao = DaoFactory.acessoUsuarioDao();
 			    if(dao.checkLogin(txtLogin.getText(), txtSenha.getText() )){
 		    	   JOptionPane.showMessageDialog(null, "Bem vindo!");
 		    	   Main.mudarTela("home");
@@ -49,6 +51,7 @@ public class ViewController {
 		
 		return check;
 	}
+
 
 
 }

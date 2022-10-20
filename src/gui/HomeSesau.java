@@ -8,7 +8,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import application.Main;
 import gui.util.Alerts;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -18,13 +17,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 import model.dao.DaoFactory;
 import model.dao.ServicesDao;
 
 
-public class Home extends Application {
+public class HomeSesau extends Application {
 	
 	@FXML
 	private Label msg;
@@ -37,9 +35,6 @@ public class Home extends Application {
 	
 	@FXML
 	private Button btConsulta;
-	
-	@FXML
-	private MenuItem menuSesau;
 	
 	public void onbuttonAcesso() {
 		try {
@@ -120,24 +115,9 @@ public class Home extends Application {
 		
 	}
 	
-	public Home() {
+	public HomeSesau() {
 		super();
 		
-	}
-	
-	@FXML
-	public boolean onMenuClick() throws Exception {
-		boolean check = false;
-		try {
-
-		    	   Main.mudarTela("sesau");
-   
-		}
-		catch (NumberFormatException e) {
-			Alerts.showAlert("Error", "Parse error", e.getMessage(), AlertType.ERROR);
-		}
-		
-		return check;
 	}
 
 	@Override
