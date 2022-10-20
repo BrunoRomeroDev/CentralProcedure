@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+   <children>
+      <Button fx:id="btSum" layoutX="103.0" layoutY="215.0" mnemonicParsing="false" onAction="#onBtSumClick" prefHeight="25.0" prefWidth="197.0" text="login" />
+      <Label layoutX="154.0" layoutY="47.0" text="Login">
+         <font>
+            <Font name="Bernard MT Condensed" size="32.0" />
+         </font></Label>
+      <TextField fx:id="txtLogin" layoutX="102.0" layoutY="123.0" prefHeight="25.0" prefWidth="197.0" promptText="login" />
+      <PasswordField fx:id="txtSenha" layoutX="103.0" layoutY="158.0" prefHeight="25.0" prefWidth="197.0" promptText="senha" />
+   </children>
+</AnchorPane>

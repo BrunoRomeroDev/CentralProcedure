@@ -1,0 +1,5 @@
+dburl=jdbc:postgresql://10.171.0.10:5432/SIAP
+database=SIAP
+user=postgres
+password=123@pmsv
+useSSL=false
