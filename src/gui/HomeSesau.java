@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import application.Main;
 import gui.util.Alerts;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 import model.dao.DaoFactory;
 import model.dao.ServicesDao;
@@ -35,6 +37,12 @@ public class HomeSesau extends Application {
 	
 	@FXML
 	private Button btConsulta;
+	
+	@FXML
+	private MenuItem menuSesau;
+	
+	@FXML
+	private MenuItem home;
 	
 	public void onbuttonAcesso() {
 		try {
@@ -119,7 +127,36 @@ public class HomeSesau extends Application {
 		super();
 		
 	}
+	
+	@FXML
+	public boolean onMenuClick() throws Exception {
+		boolean check = false;
+		try {
 
+		    	   Main.mudarTela("homesesau");
+   
+		}
+		catch (NumberFormatException e) {
+			Alerts.showAlert("Error", "Parse error", e.getMessage(), AlertType.ERROR);
+		}
+		
+		return check;
+	}
+
+	@FXML
+	public boolean onMenuHome() throws Exception {
+		boolean check = false;
+		try {
+
+		    	   Main.mudarTela("home");
+   
+		}
+		catch (NumberFormatException e) {
+			Alerts.showAlert("Error", "Parse error", e.getMessage(), AlertType.ERROR);
+		}
+		
+		return check;
+	}
 	@Override
 	public void start(Stage stage) {
 		try {

@@ -9,13 +9,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Home">
+<AnchorPane prefHeight="500.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HomeSesau">
    <children>
       <MenuBar prefHeight="25.0" prefWidth="619.0">
         <menus>
           <Menu mnemonicParsing="false" text="Módulo">
             <items>
-              <MenuItem mnemonicParsing="false" text="SESAU" />
+              <MenuItem fx:id="menuSesau" mnemonicParsing="false" onAction="#onMenuClick" text="SESAU" />
+                  <MenuItem fx:id="home" mnemonicParsing="false" onAction="#onMenuHome" text="Home" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -25,7 +26,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label fx:id="msg" layoutX="164.0" layoutY="34.0" prefHeight="43.0" prefWidth="291.0" text="Central de Procedures" textOverrun="CENTER_ELLIPSIS">
+      <Label fx:id="msg" layoutX="164.0" layoutY="34.0" prefHeight="43.0" prefWidth="291.0" text="Procedures SESAU" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="29.0" />
          </font></Label>

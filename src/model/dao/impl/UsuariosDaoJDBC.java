@@ -176,6 +176,7 @@ public class UsuariosDaoJDBC implements UsuariosDao {
             Logger.getLogger(UsuariosDao.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
         	DB.closeStatement(st);
+        	DB.closeResultSet(rs);
         }
 
         return check;

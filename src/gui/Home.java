@@ -41,6 +41,12 @@ public class Home extends Application {
 	@FXML
 	private MenuItem menuSesau;
 	
+	@FXML
+	private MenuItem menuHome;
+	
+	@FXML
+	private MenuItem menuSobre;
+	
 	public void onbuttonAcesso() {
 		try {
 		      JTextField chapa = new JTextField(6);
@@ -130,7 +136,37 @@ public class Home extends Application {
 		boolean check = false;
 		try {
 
-		    	   Main.mudarTela("sesau");
+		    	   Main.mudarTela("homesesau");
+   
+		}
+		catch (NumberFormatException e) {
+			Alerts.showAlert("Error", "Parse error", e.getMessage(), AlertType.ERROR);
+		}
+		
+		return check;
+	}
+	
+	@FXML
+	public boolean onMenuHome() throws Exception {
+		boolean check = false;
+		try {
+
+		    	   Main.mudarTela("home");
+   
+		}
+		catch (NumberFormatException e) {
+			Alerts.showAlert("Error", "Parse error", e.getMessage(), AlertType.ERROR);
+		}
+		
+		return check;
+	}
+	
+	@FXML
+	public boolean onMenuSobre() throws Exception {
+		boolean check = false;
+		try {
+
+		    	   Main.mudarTela("sobre");
    
 		}
 		catch (NumberFormatException e) {

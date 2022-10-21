@@ -9,18 +9,19 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Home">
+<AnchorPane prefHeight="500.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Home">
    <children>
       <MenuBar prefHeight="25.0" prefWidth="619.0">
         <menus>
           <Menu mnemonicParsing="false" text="Módulo">
             <items>
               <MenuItem fx:id="menuSesau" mnemonicParsing="false" onAction="#onMenuClick" text="SESAU" />
+                  <MenuItem mnemonicParsing="false" text="Home" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="menuSobre" mnemonicParsing="false" onAction="#onMenuSobre" text="Sobre" />
             </items>
           </Menu>
         </menus>

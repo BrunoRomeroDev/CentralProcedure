@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Sobre">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="650.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+                  <MenuItem fx:id="menuHome" mnemonicParsing="false" onAction="#onMenuHome" text="Home" />
+              <MenuItem fx:id="menuSesau" mnemonicParsing="false" onAction="#onMenuSesau" text="SESAU" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="titulo" layoutX="215.0" layoutY="35.0" prefHeight="79.0" prefWidth="189.0" text="Sobre " />
+      <Label fx:id="conteudo" layoutX="176.0" layoutY="190.0" prefHeight="91.0" prefWidth="268.0" text="Aplicativo criado em 2022 para execução das procedures do sistema SIAP" wrapText="true" />
+   </children>
+</AnchorPane>
