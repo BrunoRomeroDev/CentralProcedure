@@ -44,6 +44,9 @@ public class HomeSesau extends Application {
 	@FXML
 	private MenuItem home;
 	
+	@FXML
+	private MenuItem menuSobre;
+	
 	public void onbuttonAcesso() {
 		try {
 		      JTextField chapa = new JTextField(6);
@@ -157,6 +160,22 @@ public class HomeSesau extends Application {
 		
 		return check;
 	}
+	
+	@FXML
+	public boolean onMenuSobre() throws Exception {
+		boolean check = false;
+		try {
+
+		    	   Main.mudarTela("sobre");
+   
+		}
+		catch (NumberFormatException e) {
+			Alerts.showAlert("Error", "Parse error", e.getMessage(), AlertType.ERROR);
+		}
+		
+		return check;
+	}
+	
 	@Override
 	public void start(Stage stage) {
 		try {

@@ -52,7 +52,7 @@ public class ServiceDaoJDBC implements ServicesDao{
 		ResultSet rs = null;
 		try {
 			
-			cs = conn.prepareCall("SELECT * FROM public.aac_acessos_usuario limit 10");
+			cs = conn.prepareCall("SELECT * FROM users");
 			rs = cs.executeQuery();
 				
 			JOptionPane.showMessageDialog(null,rs.toString()+ " Executado com Sucesso!!!");

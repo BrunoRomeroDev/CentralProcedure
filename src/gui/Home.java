@@ -2,12 +2,6 @@ package gui;
 
 import java.io.IOException;
 
-import javax.swing.Box;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
 import application.Main;
 import gui.util.Alerts;
 import javafx.application.Application;
@@ -20,8 +14,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
-import model.dao.DaoFactory;
-import model.dao.ServicesDao;
 
 
 public class Home extends Application {

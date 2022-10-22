@@ -30,7 +30,7 @@
          <font>
             <Font size="29.0" />
          </font></Label>
-      <Button fx:id="btSesau" layoutX="26.0" layoutY="130.0" mnemonicParsing="false" onAction="#onMenuSesau" text="PMSV_ACESSOS" />
+      <Button fx:id="btSesau" layoutX="26.0" layoutY="130.0" mnemonicParsing="false" onAction="#onMenuSesau" text="SESAU" />
       <Line endX="436.0" layoutX="128.0" layoutY="117.0" startX="-100.0" />
       <Label layoutX="28.0" layoutY="88.0" text="Módulos" />
    </children>
