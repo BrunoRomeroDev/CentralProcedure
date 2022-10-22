@@ -15,7 +15,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Módulo">
             <items>
-              <MenuItem fx:id="menuSesau" mnemonicParsing="false" onAction="#onMenuClick" text="SESAU" />
+              <MenuItem fx:id="menuSesau" mnemonicParsing="false" onAction="#onMenuSesau" text="SESAU" />
                   <MenuItem mnemonicParsing="false" text="Home" />
             </items>
           </Menu>
@@ -30,12 +30,8 @@
          <font>
             <Font size="29.0" />
          </font></Label>
-      <Button fx:id="btAcesso" layoutX="26.0" layoutY="130.0" mnemonicParsing="false" onAction="#onbuttonAcesso" text="PMSV_ACESSOS" />
-      <Button fx:id="btDerruba" layoutX="141.0" layoutY="130.0" mnemonicParsing="false" onAction="#onbtDerruba" text="PMSV_DERRUBA" />
-      <Button fx:id="btConsulta" layoutX="26.0" layoutY="311.0" mnemonicParsing="false" onAction="#onbuttonConsulta" prefHeight="25.0" prefWidth="102.0" text="Cons. Usuário" />
-      <Line endX="436.0" layoutX="128.0" layoutY="287.0" startX="-100.0" />
+      <Button fx:id="btSesau" layoutX="26.0" layoutY="130.0" mnemonicParsing="false" onAction="#onMenuSesau" text="PMSV_ACESSOS" />
       <Line endX="436.0" layoutX="128.0" layoutY="117.0" startX="-100.0" />
-      <Label layoutX="28.0" layoutY="88.0" text="Procedures" />
-      <Label layoutX="26.0" layoutY="261.0" text="Consultas" />
+      <Label layoutX="28.0" layoutY="88.0" text="Módulos" />
    </children>
 </AnchorPane>

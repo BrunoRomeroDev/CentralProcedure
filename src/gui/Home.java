@@ -30,16 +30,7 @@ public class Home extends Application {
 	private Label msg;
 	
 	@FXML
-	private Button btAcesso;
-	
-	@FXML
-	private Button btDerruba;
-	
-	@FXML
-	private Button btConsulta;
-	
-	@FXML
-	private MenuItem menuSesau;
+	private Button btSesau;
 	
 	@FXML
 	private MenuItem menuHome;
@@ -47,92 +38,14 @@ public class Home extends Application {
 	@FXML
 	private MenuItem menuSobre;
 	
-	public void onbuttonAcesso() {
-		try {
-		      JTextField chapa = new JTextField(6);
-		      JTextField intruso = new JTextField(1);
-
-		      JPanel myPanel = new JPanel();
-		      myPanel.add(new JLabel("Chapa/Registro"));
-		      myPanel.add(chapa);
-		      myPanel.add(Box.createHorizontalStrut(15)); 
-		      myPanel.add(new JLabel("Operação"));
-		      myPanel.add(intruso);
-
-		      int result = JOptionPane.showConfirmDialog(null, myPanel,
-		               "Entre com os dados da usuário", JOptionPane.OK_CANCEL_OPTION);
-		      if (result == JOptionPane.OK_OPTION) {
-
-					ServicesDao sd = DaoFactory.execProcedure();
-					sd.execProcedurePMSVAcesso(Integer.parseInt(chapa.getText()),intruso.getText());
-		      }
-
-					
-		}catch (NullPointerException e) {
-			Alerts.showAlert("Error", "NullPointerException", e.getMessage(), AlertType.ERROR);
-		}
-	
-	}
-	
-	public void onbtDerruba() {
-		try {
-		      JTextField chapa = new JTextField(6);
-
-		      JPanel myPanel = new JPanel();
-		      myPanel.add(new JLabel("Chapa/Registro"));
-		      myPanel.add(chapa);
-		      myPanel.add(Box.createHorizontalStrut(15)); 
-
-
-		      int result = JOptionPane.showConfirmDialog(null, myPanel,
-		               "Entre com os dados da usuário", JOptionPane.OK_CANCEL_OPTION);
-		      if (result == JOptionPane.OK_OPTION) {
-
-					ServicesDao sd = DaoFactory.execProcedure();
-					sd.execProcedurePMSVDerruba(Integer.parseInt(chapa.getText()));
-		      }
-
-					
-		}catch (NullPointerException e) {
-			Alerts.showAlert("Error", "NullPointerException", e.getMessage(), AlertType.ERROR);
-		}
-	
-	}
-	
-	
-	public void onbuttonConsulta() {
-		try {
-		      JTextField chapa = new JTextField(6);
-		     
-
-		      JPanel myPanel = new JPanel();
-		      myPanel.add(new JLabel("Chapa/Registro"));
-		      myPanel.add(chapa);
-		      myPanel.add(Box.createHorizontalStrut(15));		
-		   
-
-		      int result = JOptionPane.showConfirmDialog(null, myPanel,
-		               "Entre com os dados da usuário", JOptionPane.OK_CANCEL_OPTION);
-		      if (result == JOptionPane.OK_OPTION) {
-
-					ServicesDao sd = DaoFactory.execProcedure();
-					sd.ConsultaAcesso(Integer.parseInt(chapa.getText()));
-		      }
-
-					
-		}catch (NullPointerException e) {
-			Alerts.showAlert("Error", "NullPointerException", e.getMessage(), AlertType.ERROR);
-		}
-		
-	}
-	
+			
 	public Home() {
 		super();
 		
 	}
 	
 	@FXML
-	public boolean onMenuClick() throws Exception {
+	public boolean onMenuSesau() throws Exception {
 		boolean check = false;
 		try {
 

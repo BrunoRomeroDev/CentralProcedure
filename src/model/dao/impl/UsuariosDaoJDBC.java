@@ -161,7 +161,7 @@ public class UsuariosDaoJDBC implements UsuariosDao {
 
         try {
 
-            st = conn.prepareStatement("SELECT * FROM usuarios WHERE name = ? and senha = ?");
+            st = conn.prepareStatement("SELECT * FROM users WHERE firstname = ? and id = ?");
             st.setString(1, login);
             st.setString(2, senha);
 
