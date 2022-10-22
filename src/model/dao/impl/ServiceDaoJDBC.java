@@ -52,10 +52,11 @@ public class ServiceDaoJDBC implements ServicesDao{
 		ResultSet rs = null;
 		try {
 			
-			cs = conn.prepareCall("SELECT * FROM users");
+			cs = conn.prepareStatement("SELECT * FROM users");
 			rs = cs.executeQuery();
+			rs.next();
 				
-			JOptionPane.showMessageDialog(null,rs.toString()+ " Executado com Sucesso!!!");
+			JOptionPane.showMessageDialog(null,"Nome "+rs.getString("FIRSTNAME")+"Sobrenome " +rs.getString("LASTNAME")+ " Executado com Sucesso!!!");
 			
 				
 		}catch (SQLException e){
