@@ -47,8 +47,9 @@ public class HomeSesau extends Application {
 	@FXML
 	private MenuItem menuSobre;
 	
+	
 	public void onbuttonAcesso() {
-		try {
+	/*	try {
 		      JTextField chapa = new JTextField(6);
 		      JTextField intruso = new JTextField(1);
 
@@ -71,16 +72,17 @@ public class HomeSesau extends Application {
 		}catch (NullPointerException e) {
 			Alerts.showAlert("Error", "NullPointerException", e.getMessage(), AlertType.ERROR);
 		}
-	
+	*/
 	}
+	
 	
 	public void onbtDerruba() {
 		try {
-		      JTextField chapa = new JTextField(6);
+		      JTextField login = new JTextField(6);
 
 		      JPanel myPanel = new JPanel();
 		      myPanel.add(new JLabel("Chapa/Registro"));
-		      myPanel.add(chapa);
+		      myPanel.add(login);
 		      myPanel.add(Box.createHorizontalStrut(15)); 
 
 
@@ -89,7 +91,7 @@ public class HomeSesau extends Application {
 		      if (result == JOptionPane.OK_OPTION) {
 
 					ServicesDao sd = DaoFactory.execProcedure();
-					sd.execProcedurePMSVDerruba(Integer.parseInt(chapa.getText()));
+					sd.execProcedurePMSVDerruba(String.valueOf(login.getText()) );
 		      }
 
 					

@@ -52,11 +52,21 @@ public class ServiceDaoJDBC implements ServicesDao{
 		ResultSet rs = null;
 		try {
 			
-			cs = conn.prepareStatement("SELECT * FROM users");
+			cs = conn.prepareStatement("SELECT\r\n"
+					+ "        uc.codigo_usuario,\r\n"
+					+ "        au.nome,\r\n"
+					+ "        au.senha\r\n"
+					+ "      FROM\r\n"
+					+ "        aac_usuario_complemento uc\r\n"
+					+ "      left join\r\n"
+					+ "        aac_usuarios au on au.codigo_usuario = uc.codigo_usuario\r\n"
+					+ "      WHERE\r\n"
+					+ "        uc.chapa = ?");
+			cs.setInt(1, chapa);
 			rs = cs.executeQuery();
 			rs.next();
 				
-			JOptionPane.showMessageDialog(null,"Nome "+rs.getString("FIRSTNAME")+"Sobrenome " +rs.getString("LASTNAME")+ " Executado com Sucesso!!!");
+			JOptionPane.showMessageDialog(null,"Nome: "+rs.getString("NOME").trim()+" \r\nCódigo: " +rs.getString("CODIGO_USUARIO").trim());
 			
 				
 		}catch (SQLException e){
@@ -70,8 +80,26 @@ public class ServiceDaoJDBC implements ServicesDao{
 
 
 	@Override
-	public void execProcedurePMSVDerruba(Integer chapa) {
-		
+	public void execProcedurePMSVDerruba(String login) {
+		PreparedStatement cs = null;
+		ResultSet rs = null;
+		try {
+			
+			cs = conn.prepareStatement(
+					"execute procedure PMSV_DERRUBA_SESSAO (?)");
+			
+				cs.setString(1, login);
+
+				rs = cs.executeQuery() ;
+				
+					JOptionPane.showMessageDialog(null, " Executado com Sucesso!!!");
+				
+		}catch (SQLException e){
+			throw new DbException(e.getMessage());
+		}finally {
+			DB.closeStatement(cs);
+			DB.closeResultSet(rs);
+		}
 		
 	}
 

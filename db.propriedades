@@ -1,5 +1,6 @@
-dburl=jdbc:firebirdsql://localhost:3050/TESTES
-database=TESTES
-user=SYSDBA
-password=sysdba
+dburl=jdbc:firebirdsql://10.171.0.3:3050/databases/SIAP2000_DIARIO.GDB
+database=SIAP2000_DIARIO
+user=GERENTE
+password=leitura
 useSSL=false
+Charset=WIN1252
